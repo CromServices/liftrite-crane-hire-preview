@@ -61,7 +61,7 @@ html[data-theme="dark"]{
 }
 
 *{box-sizing:border-box}
-html,body{margin:0;padding:0;overflow-x:hidden}
+html,body{margin:0;padding:0;overflow-x:clip}
 html{scroll-behavior:smooth;background:var(--paper)}
 body{
   font-family:"Source Sans 3",system-ui,sans-serif;
