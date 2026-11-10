@@ -366,9 +366,29 @@
   <a class="btn btn-yellow" href="#book">Book</a>
 </div>
 
-<dialog class="lightbox" id="lightbox" aria-label="Photograph">
-  <button type="button" class="close">Close</button>
-  <div class="stage"></div>
+<dialog class="lightbox" id="lightbox" aria-modal="true" aria-labelledby="lightbox-caption">
+  <button type="button" class="lightbox-close" aria-label="Close">
+    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+      <path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+    </svg>
+  </button>
+  <button type="button" class="lightbox-prev" aria-label="Previous photograph">
+    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+      <path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+  <button type="button" class="lightbox-next" aria-label="Next photograph">
+    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+      <path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+  <figure class="lightbox-figure">
+    <img class="lightbox-img" id="lightbox-img" alt="">
+    <figcaption class="lightbox-meta">
+      <p class="lightbox-caption" id="lightbox-caption"></p>
+      <p class="lightbox-count" id="lightbox-count" aria-live="polite"></p>
+    </figcaption>
+  </figure>
 </dialog>
 
 <script src="js/site.js"></script>
